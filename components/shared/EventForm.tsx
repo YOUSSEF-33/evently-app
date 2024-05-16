@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
+//import { Control } from 'react-hook-form';
 import {
   Form,
   FormControl,
@@ -46,6 +47,7 @@ const EventForm = ({ type, userId, event, eventId }: eventFormTypes) => {
           ...event,
           startDateTime: new Date(event.startDateTime),
           endDateTime: new Date(event.endDateTime),
+          price: event.price.toString(),
         }
       : eventDefaultValues;
   const { startUpload } = useUploadThing("imageUploader");
