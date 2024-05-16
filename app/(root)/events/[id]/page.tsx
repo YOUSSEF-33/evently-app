@@ -6,11 +6,11 @@ import {
 } from "@/lib/actions/event.action";
 import { formatDateTime } from "@/lib/utils";
 import { auth } from "@clerk/nextjs";
-import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+//import {Params}  from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = async (searchParams: Params) => {
+const page = async (searchParams: any) => {
   const eventId: string = searchParams.params.id;
   //console.log(eventId)
   const event = await getEventById(eventId);
