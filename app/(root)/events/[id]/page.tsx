@@ -6,7 +6,7 @@ import {
 } from "@/lib/actions/event.action";
 import { formatDateTime } from "@/lib/utils";
 import { auth } from "@clerk/nextjs";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import Link from "next/link";
 
