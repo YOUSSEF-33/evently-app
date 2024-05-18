@@ -79,13 +79,13 @@ const EventForm = ({ type, userId, event, eventId }: eventFormTypes) => {
           userId,
           path: "/profile",
         });
-
+        //console.log(newEvent)
         if (newEvent) {
           form.reset();
           router.push(`/events/${newEvent._id}`);
         }
       } catch (error) {
-        console.log(error);
+        console.log(error); 
       }
     }
 
